@@ -1,5 +1,5 @@
-const pgConnection = process.env.DATABASE_URL || "postgresql://postgres@localhost/hobbits";
-
+const pgConnection = process.env.DATABASE_URL ||
+  "postgresql://postgres@localhost/hobbits";
 module.exports = {
   development: {
     client: "sqlite3",
@@ -28,6 +28,7 @@ module.exports = {
     },
   },
 
+  //when configuring horoku we will use this 
   production: {
     client: "pg",
     connection: pgConnection,
